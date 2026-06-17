@@ -1,0 +1,40 @@
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-cream);
+  font-weight: 400;
+  font-size: var(--text-base);
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3,
+.hero__name,
+.service-card__title,
+.about-section__lead,
+.services-section__lead {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-text-primary);
+}
+
+p {
+  font-weight: 300;
+  color: var(--color-text-primary);
+  line-height: 1.65;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --text-base: 0.95rem;
+    --text-lg: 1.05rem;
+    --text-xl: 1.2rem;
+    --text-2xl: 1.45rem;
+    --text-3xl: 1.7rem;
+  }
+}

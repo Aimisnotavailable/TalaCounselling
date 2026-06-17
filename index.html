@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TALA COUNSELLING</title>
+    <meta name="description" content="Raymond Dilag, MA, RCC — compassionate, trauma-informed counselling for anxiety, relationships, men's issues, and life transitions. Book a free consultation today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/celestial.css">
+    <link rel="stylesheet" href="css/booking-overlay.css">
+</head>
+<body>
+    <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+    <div class="celestial-orb celestial-orb--top-right" aria-hidden="true"></div>
+    <div class="celestial-orb celestial-orb--mid-left" aria-hidden="true"></div>
+
+    <!-- ========== STICKY HEADER ========== -->
+    <header class="site-header">
+        <a href="/" class="logo" aria-label="Tala Counselling Home">
+            <svg class="logo__star" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="currentColor"/>
+            </svg>
+            <span class="logo__text">TALA</span>
+        </a>
+
+        <!-- Desktop navigation -->
+        <nav class="site-nav site-nav--desktop" aria-label="Primary navigation">
+            <ul class="site-nav__list">
+                <li><a href="/" class="site-nav__link site-nav__link--active" aria-current="page">Home</a></li>
+                <li><a href="/about" class="site-nav__link">About</a></li>
+                <li><a href="/services" class="site-nav__link">Services</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header Book button (always visible) -->
+        <a href="/contact" class="header-book-btn" data-booking-trigger aria-label="Book a session">Book</a>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+        </button>
+    </header>
+
+    <!-- Mobile navigation panel -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+            <ul class="mobile-nav__list">
+                <li><a href="/" class="mobile-nav__link mobile-nav__link--active" aria-current="page">Home</a></li>
+                <li><a href="/about" class="mobile-nav__link">About</a></li>
+                <li><a href="/services" class="mobile-nav__link">Services</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content">
+
+        <!-- HERO: 50/50 split on desktop, stacked on mobile -->
+        <section class="hero" id="hero">
+            <div class="hero__inner">
+                <div class="hero__photo-side">
+                    <div class="hero__photo-frame">
+                        <div class="hero__photo-placeholder">
+                            <!-- <svg width="64" height="64" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <circle cx="24" cy="18" r="8" fill="rgba(61,90,73,0.15)"/>
+                                <ellipse cx="24" cy="38" rx="14" ry="10" fill="rgba(61,90,73,0.1)"/>
+                            </svg> -->
+                            <img src="assets/raymond-dilag-headshot.jpg"
+                                 alt="Raymond Dilag, MA, RCC — warm, approachable portrait"
+                                 class="hero__photo-img"
+                                 loading="eager"
+                                 width="200" height="200">
+                           
+                        </div>
+                        <div class="hero__photo-glow" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <div class="hero__text-side">
+                    <p class="hero__credentials">Raymond Dilag, MA, RCC</p>
+                    <h1 class="hero__name">Find Clarity, Connection, and a Life That Feels Genuinely Yours</h1>
+                    <p class="hero__subhead">You don't have to carry the weight of anxiety, disconnection, or uncertainty alone.</p>
+                    <p class="hero__body">
+                        Therapy isn't about quick fixes—it's about understanding yourself more deeply and healing what's been holding you back. Raymond creates a space where your story is honored without judgment.
+                    </p>
+
+                    <!-- Vertical bullet list — scannable specialties -->
+                    <div class="hero__space-list">
+                        <p class="hero__space-label">This is a space for:</p>
+                        <ul class="hero__space-items">
+                            <li>Men's Issues &amp; Life Transitions</li>
+                            <li>Relationships &amp; Connection</li>
+                            <li>Cultural &amp; Identity Exploration</li>
+                            <li>Anxiety, Depression, &amp; Trauma</li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn--primary btn--hero-cta" data-booking-trigger>
+                        <span>Book a Free Consultation</span>
+                        <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M3 8H13M10 5L13 8L10 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="accent-divider" aria-hidden="true">
+
+        <!-- SERVICES: 3-column on desktop, single-column stack on mobile -->
+        <section class="services-section" id="services">
+            <div class="services-section__inner">
+                <p class="services-section__lead">How I can help</p>
+                <div class="services-cards">
+                    <div class="service-card">
+                        <h3 class="service-card__title">Anxiety &amp; Stress</h3>
+                        <p class="service-card__desc">Quiet the noise and find steady ground.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-card__title">Relationships</h3>
+                        <p class="service-card__desc">Navigate connection, boundaries, and care.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="service-card__title">Life Transitions</h3>
+                        <p class="service-card__desc">Move through change with support and clarity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="accent-divider" aria-hidden="true">
+        <!--
+        ABOUT: deeper professional history moved here
+        <section class="about-section" id="about">
+            <div class="about-section__inner">
+                <p class="about-section__lead">About Raymond</p>
+                <div class="about-section__body">
+                    <p>
+                        As an immigrant and a former legal professional with over ten years of experience, Raymond brings a profound understanding of how life's hardships shape us and what it takes to grow through them. His path to becoming a therapist was forged through real-world experience navigating complex systems, advocating for others, and witnessing firsthand how unaddressed emotional pain can hold people back.
+                    </p>
+                    <p>
+                        Drawing on a compassionate blend of <strong>narrative therapy</strong>, <strong>Internal Family Systems (IFS)</strong>, and <strong>trauma-informed, culturally sensitive practices</strong>, Raymond creates a space where every part of your story is welcome. Whether you are navigating a major life transition, struggling with relationship patterns, or grappling with the deep sense of not quite belonging, you will be met with genuine curiosity, warmth, and respect.
+                    </p>
+                    <p>
+                        Sessions are available both <strong>in-person in Vancouver</strong> and <strong>online</strong> across British Columbia. Raymond works with adults of all backgrounds and identities, with a particular focus on men's mental health, cultural identity exploration, and the unique challenges that come with living between cultures.
+                    </p>
+                </div>
+            </div>
+        </section>
+        -->
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <p class="site-footer__text">© <span id="current-year"></span> Tala Counselling — Raymond Dilag, MA, RCC</p>
+        <p class="site-footer__location">Serving clients across British Columbia</p>
+    </footer>
+
+    <!-- ========== BOOKING OVERLAY ========== -->
+    <div class="booking-overlay" id="booking-overlay" role="dialog" aria-modal="true" aria-label="Opening booking portal" hidden>
+        <div class="booking-overlay__backdrop"></div>
+        <div class="booking-overlay__panel">
+            <svg class="booking-overlay__logo-star" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="currentColor"/>
+            </svg>
+            <p class="booking-overlay__message">Opening your secure booking portal…</p>
+            <p class="booking-overlay__submessage">You'll be redirected in just a moment.</p>
+            <div class="booking-overlay__pulse" aria-hidden="true"></div>
+        </div>
+    </div>
+
+    <script src="js/celestial-effects.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
