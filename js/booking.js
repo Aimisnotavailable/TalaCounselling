@@ -1,7 +1,6 @@
 (() => {
   const overlay = document.getElementById('booking-overlay');
   const triggers = document.querySelectorAll('[data-booking-trigger]');
-  // ⚠️ Replace with your real Jane App booking URL
   const BOOKING_URL = 'https://talacounselling.janeapp.com/';
 
   function openOverlay(e) {
