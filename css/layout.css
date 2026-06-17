@@ -129,7 +129,7 @@ body {
 /* ========== HERO 50/50 SPLIT ========== */
 .hero__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* top-align photo + credentials with text */
   gap: var(--space-xl);
   width: 100%;
 }

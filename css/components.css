@@ -63,12 +63,20 @@
   margin-top: 1rem;
 }
 
-/* ========== HERO PHOTO ========== */
+/* ========== HERO PHOTO + CREDENTIALS ========== */
+.hero__photo-side {
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 .hero__photo-frame {
   width: 100%;
   max-width: 220px;
-  aspect-ratio: 4 / 5; /* natural portrait proportion */
-  border-radius: var(--radius-md); /* soft rectangle, not a circle */
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(0,0,0,0.06), 0 0 0 1px var(--color-accent-soft);
   background: rgba(215,187,163,0.1);
@@ -92,15 +100,19 @@
   object-fit: cover;
 }
 
-/* ========== HERO TEXT ========== */
+/* Credentials now under the photo */
 .hero__credentials {
   font-size: var(--text-xs);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-primary);
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  text-align: center;
+  margin-top: 0.1rem;
 }
+
+
+/* ========== HERO TEXT ========== */
 
 .hero__name {
   font-size: var(--text-3xl);
